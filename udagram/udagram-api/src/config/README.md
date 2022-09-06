@@ -1,6 +1,5 @@
 
 ## Environment Variables Explaination
-
 You need a separate S3 Media bucket !
 
 `POSTGRES_HOST` : Your Postgres DB host  
