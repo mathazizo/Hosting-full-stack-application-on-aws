@@ -73,4 +73,4 @@ The e2e tests are using Protractor and Jasmine.
 
 ## Frontend url
 
-https://randomziko.s3.amazonaws.com/index.html
+http://randomziko.s3.amazonaws.com/index.html
