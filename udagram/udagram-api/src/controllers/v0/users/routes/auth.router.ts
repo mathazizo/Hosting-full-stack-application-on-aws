@@ -8,10 +8,9 @@ import * as jwt from 'jsonwebtoken';
 import {NextFunction} from 'connect';
 
 import * as EmailValidator from 'email-validator';
-import {config} from 'bluebird';
 
 const router: Router = Router();
-var bcrypt = require('bcryptjs');
+import bcrypt from 'bcryptjs';
 
 async function generatePassword(plainTextPassword: string): Promise<string> {
   const saltRounds = 10;
@@ -38,6 +37,7 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
   }
 
   const token = tokenBearer[1];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return jwt.verify(token, c.config.jwt.secret, (err, decoded) => {
     if (err) {
       return res.status(500).send({auth: false, message: 'Failed to authenticate.'});
@@ -99,11 +99,10 @@ router.post('/', async (req: Request, res: Response) => {
 
   const generatedHash = await generatePassword(plainTextPassword);
 
-  const newUser = await new User({
-    email: email,
-    passwordHash: generatedHash,
-  });
+  const newUser = await new User();
 
+  newUser.email=email;
+  newUser.passwordHash=generatedHash;
   const savedUser = await newUser.save();
 
 

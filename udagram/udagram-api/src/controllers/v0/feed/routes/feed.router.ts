@@ -18,6 +18,7 @@ export function requireAuth(req: Request, res: Response, next: NextFunction) {
   }
 
   const token = tokenBearer[1];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   return jwt.verify(token, c.config.jwt.secret, (err, decoded) => {
     if (err) {
       return res.status(500).send({auth: false, message: 'Failed to authenticate.'});
@@ -69,11 +70,9 @@ router.post('/',
         return res.status(400).send({message: 'File url is required.'});
       }
 
-      const item = await new FeedItem({
-        caption: caption,
-        url: fileName,
-      });
-
+      const item = new FeedItem();
+      item.caption= caption;
+      item.url=fileName;
       const savedItem = await item.save();
 
       savedItem.url = AWS.getGetSignedUrl(savedItem.url);
