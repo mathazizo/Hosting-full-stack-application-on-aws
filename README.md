@@ -38,9 +38,9 @@ A more in depth documentation into the application.
 
 ### AWS Cloud Setup
 
-- RDS - Database Host: project.cqg1cl7skyby.us-east-1.rds.amazonaws.com
+- RDS - Database Host: test.chxxciwahxss.us-east-1.rds.amazonaws.com
 - RDS - Database Port: 5432
-- RDS - Database Name: project
+- RDS - Database Name: test
 
 - S3 Endpoint - Frontend: https://randomziko.s3.amazonaws.com/index.html
 
@@ -118,3 +118,4 @@ The e2e tests are using Protractor and Jasmine.
 - [Angular](https://angular.io/) - Single Page Application Framework
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
+
