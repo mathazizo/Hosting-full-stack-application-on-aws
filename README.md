@@ -46,6 +46,7 @@ A more in depth documentation into the application.
 
 - Elastic Beanstalk URL - Backend: http://testenv-env.eba-bfvzms3h.us-east-1.elasticbeanstalk.com/
 
+
 ## Environment Variables
 
 Setup the following variables in the .env file or in the cloud environments:
