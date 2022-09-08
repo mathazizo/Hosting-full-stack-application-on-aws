@@ -45,11 +45,6 @@ jobs:
           name: Back-End Install
           command: |
             npm run api:install
-# Changing the main entry point in package.json for the Backend
-      - run:
-          name: Back-End Change Main Entry Point
-          command: |
-            npm run api:change-main
 # Building the backend
       - run:
           name: Back-End Build
