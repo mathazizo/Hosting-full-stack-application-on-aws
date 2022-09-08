@@ -42,7 +42,7 @@ A more in depth documentation into the application.
 - RDS - Database Port: 5432
 - RDS - Database Name: test
 
-- S3 Endpoint - Frontend: https://randomziko.s3.amazonaws.com/index.html
+- S3 Endpoint - Frontend: http://randomziko.s3-website-us-east-1.amazonaws.com
 
 - Elastic Beanstalk URL - Backend: http://testenv-env.eba-bfvzms3h.us-east-1.elasticbeanstalk.com/
 
